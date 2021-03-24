@@ -1,23 +1,25 @@
 #include <iostream>
 using namespace std;
 
-#include <iomanip>
-using std::setw;
-
 int main () {
 
-   int n[ 10 ]; // n is an array of 10 integers
+   // size of array
+   int n;
+   cout << "Enter size of the array : ";
+   cin >> n;
 
-   // initialize elements of array n to 0
-   for ( int i = 0; i < 10; i++ ) {
-      n[ i ] = i + 100; // set element at location i to i + 100
+   // Initializing Array
+   int arr[n];
+
+   cout << "Enter elements in the array : " << endl;
+   for(int i=0; i<n; i++){
+      cin >> arr[i];
    }
-   cout << "Element" << setw( 13 ) << "Value" << endl;
 
-   // output each array element's value
-   for ( int j = 0; j < 10; j++ ) {
-      cout << setw( 7 )<< j << setw( 13 ) << n[ j ] << endl;
+   // Displaying the array
+   cout << "The elements of the array are : ";
+   for(int i=0; i<n; i++){
+      cout << arr[i] << " ";
    }
-
    return 0;
 }
